@@ -3,9 +3,9 @@ import Marquee from 'react-fast-marquee';
 
 const LatestNews = () => {
     return (
-        <div className='flex items-center gap-2 bg-base-200 p-3'>
+        <div className='flex items-center gap-2 bg-base-200 p-3 my-3'>
             <p className='text-base-100 bg-secondary px-3 py-2'>Latest</p>
-            <Marquee>
+            <Marquee pauseOnHover={true}>
                 <p className='font-bold'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur impedit quam deleniti deserunt. Sunt, quos consequatur Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro voluptatem, nulla nihil quibusdam omnis nisi, accusantium, corrupti repellendus dolores laborum facilis eum est inventore velit ipsa eveniet quisquam in hic.</p>
             </Marquee>
         </div>
