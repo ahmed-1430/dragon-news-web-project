@@ -11,16 +11,16 @@ const CategoryNews = () => {
     useEffect(()=> {
         if(id == "0"){
             setCategoryNews(data)
-            console.log(data)
+            // console.log(data)
             return;
         }else if(id == "1"){
             const filteredNews = data.filter(news => news.others.is_today_pick == true)
             setCategoryNews(filteredNews)
-            console.log(filteredNews)
+            // console.log(filteredNews)
             return;
         }else{
             const filteredNews = data.filter(news => news.category_id == id)
-            console.log(filteredNews)
+            // console.log(filteredNews)
             setCategoryNews(filteredNews)
         }
     },[data, id])
