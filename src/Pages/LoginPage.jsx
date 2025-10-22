@@ -1,13 +1,22 @@
-import React from 'react';
+import React, { use } from 'react';
 import { Link } from 'react-router';
+import { AuthContext } from '../Provider/AuthProvider';
 
 const LoginPage = () => {
+    const {loginUser}=use(AuthContext);
     const handleLogin= (e)=>{
         e.preventDefault()
         const form=e.target
         const email = form.email.value
         const password = form.password.value
         console.log({email, password});
+        loginUser(email, password)
+        .then(()=>{
+            alert("Login SuccessFully")
+        })
+        .catch(()=>{
+            alert("Error")
+        })
     }
     return (
         <div className="hero bg-base-200 h-[90vh]">
