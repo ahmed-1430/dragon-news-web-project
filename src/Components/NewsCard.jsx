@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaEye, FaStar, FaFire, FaBookmark } from 'react-icons/fa';
+import { Link } from 'react-router';
 
 const NewsCard = ({ news }) => {
   const {
@@ -10,7 +11,8 @@ const NewsCard = ({ news }) => {
     thumbnail_url,
     details,
     tags,
-    others
+    others,
+    id
   } = news;
 
   // Format date to readable format
@@ -130,9 +132,9 @@ const NewsCard = ({ news }) => {
 
         {/* Read More Button */}
         <div className="card-actions justify-end mt-4">
-          <button className="btn btn-primary btn-sm">
+          <Link to={`/news-details/${id}`} className="btn btn-primary btn-sm">
             Read More
-          </button>
+          </Link>
         </div>
       </div>
     </div>
